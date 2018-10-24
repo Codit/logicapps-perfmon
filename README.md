@@ -1,4 +1,4 @@
-# logicapps-perfmon
+# Azure Logic Apps performance monitor
 Tool to extract Azure Logic Apps performance metrics
 
 # Usage
@@ -11,3 +11,7 @@ Tool to extract Azure Logic Apps performance metrics
     - clientid: the oAuth clientid to connect to the Azure rest API
     - clientSecret:  the oAuth client secret to connect to the Azure rest API
 3. Run the tool from the commandline with the following arguments: `ReportGenerator.exe -i <name-of-config-section> -m <maximum-results:50> -d <output-dir>`
+
+# Results
+Currently, there is a CSV report generator, that outputs all action durations for every run in the following format (using milliseconds as UoM)
+
