@@ -35,7 +35,7 @@ namespace LogicAppMonitor
                 foreach (var action in response.value.OrderBy(ac => ac.properties.startTime))
                 {
                     headerNames.Add($"Lag_{actionSequenceNr++:000}");   // add lag title
-                    headerNames.Add("{action.name}_Duration;");         // add duration of action
+                    headerNames.Add($"{action.name}_Duration");         // add duration of action
                     currentRunData.Add(CalculateDuration(previousEndTime, action.properties.startTime));    // calculate lag
                     currentRunData.Add(CalculateDuration(action.properties.startTime, action.properties.endTime));  // calculate action time
                     previousEndTime = action.properties.endTime; // keep previous time for lag calculation
